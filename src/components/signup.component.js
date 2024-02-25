@@ -68,7 +68,7 @@ class SignUp extends Component {
     };
 
     axios
-      .post('http://127.0.0.1:8080/api/auth/register', userObject)
+      .post('http://127.0.0.1:8000/api/auth/register', userObject) // change to docker
       .then((res) => {
         console.log(res, "aaaaaaaaaaa");
         if (res.data.message === "User successfully registered") {
@@ -85,8 +85,7 @@ class SignUp extends Component {
           toast.error("Registration failed. Please try again");
           this.setState({ isButtonDisabled: false });
         }
-
-        alert(error.response.data)
+        console.log(error)
       });
 
     this.setState({

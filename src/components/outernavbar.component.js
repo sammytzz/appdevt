@@ -64,7 +64,7 @@ export default class Outernavbar extends Component {
                     transition: 'color 0.3s',
                     textDecoration: 'none'
                   }}
-                 
+                  
                   onMouseEnter={(e) => {
                     e.target.style.textDecoration = 'underline';
                     e.target.style.color = 'white';
