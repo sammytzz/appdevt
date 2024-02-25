@@ -46,7 +46,7 @@ export default class Login extends Component {
     };
 
     axios
-      .post('http://127.0.0.1:8000/api/auth/login', userObject) // change to docker
+      .post('http://127.0.0.1:8080/api/auth/login', userObject) // change to docker
       .then((res) => {
         if (res.status === 200) {
           localStorage.setItem('user', JSON.stringify(res.data));

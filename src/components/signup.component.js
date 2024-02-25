@@ -68,9 +68,9 @@ class SignUp extends Component {
     };
 
     axios
-      .post('http://127.0.0.1:8000/api/auth/register', userObject) // change to docker
+      .post('http://127.0.0.1:8080/api/auth/register', userObject) // change to docker
       .then((res) => {
-        console.log(res, "aaaaaaaaaaa");
+        console.log(res);
         if (res.data.message === "User successfully registered") {
           showToastMessage2();// Display success notification
           window.location = "/sign-in";
